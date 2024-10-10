@@ -101,16 +101,16 @@ FROM Marcas m
 JOIN Prendas p ON m.marca_id = p.marca_id
 JOIN Ventas v ON p.prenda_id = v.prenda_id;
 
--- ii. Obtener prendas vendidas y su cantidad restante en stock
+-- Obtener prendas vendidas y su cantidad restante en stock
 CREATE OR REPLACE VIEW PrendasVendidas AS
 SELECT p.prenda_id, p.nombre, p.stock, 
-       IFNULL(SUM(v.cantidad), 0) AS cantidad_vendida,
-       (p.stock - IFNULL(SUM(v.cantidad), 0)) AS stock_restante
+IFNULL(SUM(v.cantidad), 0) AS cantidad_vendida,
+(p.stock - IFNULL(SUM(v.cantidad), 0)) AS stock_restante
 FROM Prendas p
 LEFT JOIN Ventas v ON p.prenda_id = v.prenda_id
 GROUP BY p.prenda_id;
 
--- iii. Obtener listado de las 5 marcas más vendidas y su cantidad de ventas
+-- Obtener listado de las 5 marcas más vendidas y su cantidad de ventas
 CREATE OR REPLACE VIEW MarcasMasVendidas AS
 SELECT m.marca_id, m.nombre, COUNT(v.venta_id) AS cantidad_ventas
 FROM Marcas m
