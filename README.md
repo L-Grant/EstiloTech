@@ -1,7 +1,9 @@
 ## Descripcion.
-Proyecto enfocado en la creacion de una base de datos sobre una tienda de ropa "EstiloTech"
+Proyecto enfocado en la creacion de una base de datos sobre una tienda de ropa "EstiloTech",
+posee 4 tablas: Marcas, Prendas, Clientes, Ventas.
 
 ## Integrantes:
 Leonardo Grant
 
+## Diagrama de BD
 ![alt text](./tienda_ropa.png "Diagrama")
