@@ -1,8 +1,8 @@
 -- Base de datos
-DROP DATABASE IF EXISTS tienda_ropa;
+DROP DATABASE IF EXISTS EstiloTech;
 
-CREATE DATABASE tienda_ropa;
-USE tienda_ropa;
+CREATE DATABASE EstiloTech;
+USE EstiloTech;
 
 -- Crear las tablas
 CREATE TABLE Marcas (
