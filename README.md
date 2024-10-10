@@ -6,4 +6,4 @@ Posee 4 tablas: Marcas, Prendas, Clientes, Ventas.
 Leonardo Grant
 
 ## Diagrama de BD
-![alt text](./tienda_ropa.png "Diagrama")
+![alt text](./tienda_ropa.jpg "Diagrama")
