@@ -90,19 +90,19 @@ UPDATE Clientes SET email = 'juanp@example.com' WHERE cliente_id = 1;
 -- Obtener la cantidad vendida de prendas por fecha y filtrada
 SELECT fecha_venta, SUM(cantidad) AS total_vendido
 FROM Ventas
-WHERE DATE(fecha_venta) = '2023-10-01'
+WHERE DATE(fecha_venta) = '2023-10-06'
 GROUP BY fecha_venta;
 
 -- Creación de vistas
 -- Obtener la lista de todas las marcas que tienen al menos una venta
-CREATE OR REPLACE VIEW MarcasConVentas AS
+CREATE OR REPLACE VIEW MarcasAlMenosUnaVentas AS
 SELECT DISTINCT m.marca_id, m.nombre
 FROM Marcas m
 JOIN Prendas p ON m.marca_id = p.marca_id
 JOIN Ventas v ON p.prenda_id = v.prenda_id;
 
 -- Obtener prendas vendidas y su cantidad restante en stock
-CREATE OR REPLACE VIEW PrendasVendidas AS
+CREATE OR REPLACE VIEW PrendasVendidasYCantidadStock AS
 SELECT p.prenda_id, p.nombre, p.stock, 
 IFNULL(SUM(v.cantidad), 0) AS cantidad_vendida,
 (p.stock - IFNULL(SUM(v.cantidad), 0)) AS stock_restante
@@ -111,7 +111,7 @@ LEFT JOIN Ventas v ON p.prenda_id = v.prenda_id
 GROUP BY p.prenda_id;
 
 -- Obtener listado de las 5 marcas más vendidas y su cantidad de ventas
-CREATE OR REPLACE VIEW MarcasMasVendidas AS
+CREATE OR REPLACE VIEW CincoMarcasMasVendidas AS
 SELECT m.marca_id, m.nombre, COUNT(v.venta_id) AS cantidad_ventas
 FROM Marcas m
 JOIN Prendas p ON m.marca_id = p.marca_id
