@@ -95,22 +95,24 @@ GROUP BY fecha_venta;
 
 -- Creación de vistas
 -- Obtener la lista de todas las marcas que tienen al menos una venta
-CREATE VIEW MarcasConVentas AS
-SELECT DISTINCT m.nombre
+CREATE OR REPLACE VIEW MarcasConVentas AS
+SELECT DISTINCT m.marca_id, m.nombre
 FROM Marcas m
 JOIN Prendas p ON m.marca_id = p.marca_id
 JOIN Ventas v ON p.prenda_id = v.prenda_id;
 
--- Obtener prendas vendidas y su cantidad restante en stock
-CREATE VIEW PrendasVendidas AS
-SELECT p.nombre, p.stock, SUM(v.cantidad) AS cantidad_vendida
+-- ii. Obtener prendas vendidas y su cantidad restante en stock
+CREATE OR REPLACE VIEW PrendasVendidas AS
+SELECT p.prenda_id, p.nombre, p.stock, 
+       IFNULL(SUM(v.cantidad), 0) AS cantidad_vendida,
+       (p.stock - IFNULL(SUM(v.cantidad), 0)) AS stock_restante
 FROM Prendas p
-JOIN Ventas v ON p.prenda_id = v.prenda_id
+LEFT JOIN Ventas v ON p.prenda_id = v.prenda_id
 GROUP BY p.prenda_id;
 
--- Obtener listado de las 5 marcas más vendidas y su cantidad de ventas
-CREATE VIEW MarcasMasVendidas AS
-SELECT m.nombre, COUNT(v.venta_id) AS cantidad_ventas
+-- iii. Obtener listado de las 5 marcas más vendidas y su cantidad de ventas
+CREATE OR REPLACE VIEW MarcasMasVendidas AS
+SELECT m.marca_id, m.nombre, COUNT(v.venta_id) AS cantidad_ventas
 FROM Marcas m
 JOIN Prendas p ON m.marca_id = p.marca_id
 JOIN Ventas v ON p.prenda_id = v.prenda_id
