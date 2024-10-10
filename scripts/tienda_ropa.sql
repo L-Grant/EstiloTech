@@ -94,6 +94,11 @@ FROM Ventas
 WHERE DATE(fecha_venta) = '2023-10-06'
 GROUP BY fecha_venta;
 
+SELECT fecha_venta, SUM(cantidad) AS total_vendido
+FROM Ventas
+WHERE DATE(fecha_venta) = '2023-10-05'
+GROUP BY fecha_venta;
+
 -- Creación de vistas
 -- Obtener la lista de todas las marcas que tienen al menos una venta
 CREATE OR REPLACE VIEW MarcasAlMenosUnaVentas AS
