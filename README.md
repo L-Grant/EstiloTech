@@ -3,4 +3,4 @@ Proyecto enfocado en la creacion de una base de datos sobre una tienda de ropa "
 Integrantes:
 Leonardo Grant
 
-![alt text](./tienda_ropa/scripts/tienda_ropa.png)
+![alt text](./tienda_ropa/tienda_ropa.png)
