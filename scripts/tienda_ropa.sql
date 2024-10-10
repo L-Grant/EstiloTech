@@ -51,16 +51,16 @@ INSERT INTO Marcas (nombre, descripcion) VALUES
 ('Gucci', 'Marca de lujo italiana conocida por su moda exclusiva.');
 
 INSERT INTO Prendas (nombre, talla, color, precio, marca_id, stock) VALUES 
-('Camisa', 'M', 'Azul', 29.99, 1, 50),
-('Pantalón', 'L', 'Negro', 39.99, 2, 30),
-('Vestido', 'S', 'Rojo', 49.99, 3, 20),
-('Chaqueta', 'M', 'Verde', 59.99, 4, 15),
-('Camiseta', 'L', 'Blanco', 19.99, 5, 25),
-('Camisa', 'M', 'Rojo', 29.99, 1, 50),
-('Pantalón', 'L', 'Verde', 39.99, 2, 30),
-('Vestido', 'S', 'Rojo', 49.99, 4, 20),
-('Chaqueta', 'M', 'Blanco', 59.99, 5, 15),
-('Camiseta', 'L', 'Blanco', 19.99, 3, 25);
+('Camisa Casual', 'M', 'Azul Claro', 29.99, 1, 50),
+('Pantalón Deportivo', 'L', 'Negro', 39.99, 2, 30),
+('Vestido de Noche', 'S', 'Rojo Intenso', 59.99, 3, 20),
+('Chaqueta de Cuero', 'M', 'Negro', 89.99, 4, 15),
+('Camiseta Básica', 'L', 'Blanco', 19.99, 5, 25),
+('Camisa de Rayas', 'M', 'Rojo y Blanco', 34.99, 1, 40),
+('Pantalón Cargo', 'XL', 'Verde Oliva', 49.99, 2, 20),
+('Vestido Floral', 'M', 'Multicolor', 44.99, 3, 15),
+('Chaqueta Impermeable', 'L', 'Azul Marino', 69.99, 4, 10),
+('Camiseta Gráfica', 'S', 'Negro', 24.99, 5, 30);
 
 INSERT INTO Clientes (nombre, apellido_1, apellido_2, email, telefono) VALUES 
 ('Juan', 'Pérez', 'Gómez', 'juan@example.com', '123456789'),
@@ -86,8 +86,9 @@ DELETE FROM Prendas WHERE prenda_id = 5;
 
 -- Actualización
 UPDATE Clientes SET email = 'juanp@example.com' WHERE cliente_id = 1; 
+UPDATE Clientes SET telefono = '999999999' WHERE cliente_id = 2;
 
--- Obtener la cantidad vendida de prendas por fecha y filtrada
+-- Obtener la cantidad vendida de prendas por fecha y filtrada por fecha
 SELECT fecha_venta, SUM(cantidad) AS total_vendido
 FROM Ventas
 WHERE DATE(fecha_venta) = '2023-10-06'
