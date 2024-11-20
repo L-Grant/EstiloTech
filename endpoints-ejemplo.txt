@@ -1,0 +1,24 @@
+Clientes
+
+http://localhost/avance2/public/index.php/clientes
+http://localhost/avance2/public/index.php/clientes?id=3
+
+{
+
+    "apellido_2": "Jimenes",
+    "email": "juanpj@example.com"
+
+}
+
+
+http://localhost/avance2/public/index.php/marcas
+http://localhost/avance2/public/index.php/marcas?id=1
+
+{
+    "marca_id": 1,
+    "nombre": "Lacoste",
+    "descripcion": "Marca líder en ropa formal."
+}
+
+http://localhost/avance2/public/index.php/marcas
+http://localhost/avance2/public/index.php/marcas?id=1
