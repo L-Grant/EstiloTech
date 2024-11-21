@@ -54,7 +54,7 @@ http://localhost/EstiloTech/public/index.php/prendas?id=2
 Ventas
 
 http://localhost/EstiloTech/public/index.php/ventas
-http://localhost/EstiloTech/public/index.php/ventass?id=8
+http://localhost/EstiloTech/public/index.php/ventas?id=8
 
 {
     "fecha_venta": "2024-10-05 11:30:00",
