@@ -22,8 +22,7 @@ Leonardo Grant
     GET http://localhost/api/libreria-api/public/index.php/libros/
     ```
     Ejemplo de respuesta:
-    json
-    Copiar código
+   ```json    
     [
       {
         "nombre": "Valeria",
@@ -33,34 +32,37 @@ Leonardo Grant
         "telefono": "9871-2345"
       }
     ]
-Obtener un cliente por ID
-Método: GET
-Endpoint: http://localhost/EstiloTech/public/index.php/clientes?id={id-del-cliente}
-Descripción: Obtiene la información de un cliente específico usando su ID.
+```
+
+2. Obtener un cliente por ID
+- Método: GET
+- Endpoint: http://localhost/EstiloTech/public/index.php/clientes?id={id-del-cliente}
+- Descripción: Obtiene la información de un cliente específico usando su ID.
 Ejemplo de solicitud:
-http
-Copiar código
-GET http://localhost/EstiloTech/public/index.php/clientes?id=3
-Ejemplo de respuesta:
-json
-Copiar código
-{
+  ```http
+    GET http://localhost/EstiloTech/public/index.php/clientes?id=3
+  ```
+    Ejemplo de respuesta:
+  ```json    
+   {
   "apellido_2": "Jimenes",
   "email": "juanpj@example.com"
-}
-Endpoints para Marcas
-Obtener todas las marcas
-Método: GET
-Endpoint: http://localhost/EstiloTech/public/index.php/marcas
-Descripción: Obtiene una lista de todas las marcas disponibles en el sistema.
+  }
+
+  ```
+
+3. Obtener todas las marcas
+- Método: GET
+- Endpoint: http://localhost/EstiloTech/public/index.php/marcas
+- Descripción: Obtiene una lista de todas las marcas disponibles en el sistema.
+
 Ejemplo de solicitud:
-http
-Copiar código
-GET http://localhost/EstiloTech/public/index.php/marcas
-Ejemplo de respuesta:
-json
-Copiar código
-[
+    ```http
+    GET http://localhost/EstiloTech/public/index.php/marcas
+    ```
+    Ejemplo de respuesta:
+   ```json    
+   [
   {
     "nombre": "Old Navy"
   },
@@ -69,51 +71,60 @@ Copiar código
     "descripcion": "Marca francesa conocida por su ropa, calzado y accesorios de lujo."
   }
 ]
-Obtener una marca por ID
-Método: GET
-Endpoint: http://localhost/EstiloTech/public/index.php/marcas?id={id-de-la-marca}
-Descripción: Obtiene la información de una marca específica usando su ID.
+
+
+```
+4. Obtener una marca por ID
+- Método: GET
+- Endpoint: http://localhost/EstiloTech/public/index.php/marcas?id={id-de-la-marca}
+- Descripción: Obtiene la información de una marca específica usando su ID.
+
 Ejemplo de solicitud:
-http
-Copiar código
-GET http://localhost/EstiloTech/public/index.php/marcas?id=3
-Ejemplo de respuesta:
-json
-Copiar código
-{
+    ```http
+    GET http://localhost/EstiloTech/public/index.php/marcas?id=3
+    ```
+    Ejemplo de respuesta:
+   ```json    
+   {
   "nombre": "Lacoste",
   "descripcion": "Marca francesa conocida por su ropa, calzado y accesorios de lujo."
 }
-Endpoints para Prendas
-Obtener todas las prendas
-Método: GET
-Endpoint: http://localhost/EstiloTech/public/index.php/prendas
-Descripción: Obtiene una lista de todas las prendas disponibles en el sistema.
+
+
+```
+
+5. Obtener todas las prendas
+- Método: GET
+- Endpoint: http://localhost/EstiloTech/public/index.php/prendas
+- Descripción: Obtiene una lista de todas las prendas disponibles en el sistema.
+
 Ejemplo de solicitud:
-http
-Copiar código
-GET http://localhost/EstiloTech/public/index.php/prendas
-Ejemplo de respuesta:
-json
-Copiar código
-[
+    ```http
+    GET http://localhost/EstiloTech/public/index.php/prendas
+    ```
+    Ejemplo de respuesta:
+   ```json    
+  [
   {
     "talla": "XL",
     "precio": "49.99"
   }
 ]
-Obtener una prenda por ID
-Método: GET
-Endpoint: http://localhost/EstiloTech/public/index.php/prendas?id={id-de-la-prenda}
-Descripción: Obtiene la información de una prenda específica usando su ID.
+
+```
+
+6. Obtener una prenda por ID
+- Método: GET
+- Endpoint: http://localhost/EstiloTech/public/index.php/prendas?id={id-de-la-prenda}
+- Descripción: Obtiene la información de una prenda específica usando su ID.
+
 Ejemplo de solicitud:
-http
-Copiar código
-GET http://localhost/EstiloTech/public/index.php/prendas?id=2
-Ejemplo de respuesta:
-json
-Copiar código
-{
+    ```http
+    GET http://localhost/EstiloTech/public/index.php/prendas?id=2
+    ```
+    Ejemplo de respuesta:
+   ```json    
+   {
   "nombre": "Chaleco",
   "talla": "M",
   "color": "Azul",
@@ -121,19 +132,22 @@ Copiar código
   "marca_id": 3,
   "stock": 50
 }
-Endpoints para Ventas
-Obtener todas las ventas
-Método: GET
-Endpoint: http://localhost/EstiloTech/public/index.php/ventas
-Descripción: Obtiene una lista de todas las ventas realizadas.
+
+
+```
+
+7. Obtener todas las ventas
+- Método: GET
+- Endpoint: http://localhost/EstiloTech/public/index.php/ventas
+- Descripción: Obtiene una lista de todas las ventas realizadas.
+
 Ejemplo de solicitud:
-http
-Copiar código
-GET http://localhost/EstiloTech/public/index.php/ventas
-Ejemplo de respuesta:
-json
-Copiar código
-[
+    ```http
+    GET http://localhost/EstiloTech/public/index.php/ventas
+    ```
+    Ejemplo de respuesta:
+   ```json    
+  [
   {
     "fecha_venta": "2024-10-05 11:30:00",
     "cliente_id": 4,
@@ -142,17 +156,24 @@ Copiar código
     "subtotal": "89.98"
   }
 ]
-Obtener una venta por ID
-Método: GET
-Endpoint: http://localhost/EstiloTech/public/index.php/ventas?id={id-de-la-venta}
-Descripción: Obtiene la información de una venta específica usando su ID.
+
+
+
+```
+8. Obtener una venta por ID
+- Método: GET
+- Endpoint: http://localhost/EstiloTech/public/index.php/ventas?id={id-de-la-venta}
+- Descripción: Obtiene la información de una venta específica usando su ID.
+
 Ejemplo de solicitud:
-http
-Copiar código
-GET http://localhost/EstiloTech/public/index.php/ventas?id=8
-Ejemplo de respuesta:
-json
-Copiar código
-{
+    ```http
+    GET http://localhost/EstiloTech/public/index.php/ventas?id=8
+    ```
+    Ejemplo de respuesta:
+   ```json    
+  {
   "cliente_id": 4
 }
+
+
+```
