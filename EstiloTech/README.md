@@ -38,18 +38,20 @@ Leonardo Grant
 - Método: GET
 - Endpoint: http://localhost/EstiloTech/public/index.php/clientes?id={id-del-cliente}
 - Descripción: Obtiene la información de un cliente específico usando su ID.
+  
 Ejemplo de solicitud:
-  ```http
+    ```http
     GET http://localhost/EstiloTech/public/index.php/clientes?id=3
-  ```
+    ```
     Ejemplo de respuesta:
-  ```json    
+   ```json    
    {
   "apellido_2": "Jimenes",
   "email": "juanpj@example.com"
-  }
+}
 
-  ```
+
+```
 
 3. Obtener todas las marcas
 - Método: GET
