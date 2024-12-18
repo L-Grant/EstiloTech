@@ -6,7 +6,7 @@ Posee 4 tablas: Marcas, Prendas, Clientes, Ventas.
 Leonardo Grant
 
 ## Diagrama de BD
-![EstiloTech](./EstiloTech.jpg "Diagrama")
+![EstiloTech](./EstiloTech-api/EstiloTech.jpg "Diagrama")
 
 
 ## Uso de Endpoints de la API
