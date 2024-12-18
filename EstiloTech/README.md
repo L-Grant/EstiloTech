@@ -19,7 +19,7 @@ Leonardo Grant
     
     Ejemplo de solicitud:
     ```http
-    GET http://localhost/api/libreria-api/public/index.php/libros/
+    GET http://localhost/EstiloTech/public/index.php/clientes
     ```
     Ejemplo de respuesta:
    ```json    
