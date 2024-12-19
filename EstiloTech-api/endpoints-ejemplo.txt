@@ -1,0 +1,80 @@
+Clientes
+
+http://localhost/EstiloTech/public/index.php/clientes
+http://localhost/EstiloTech/public/index.php/clientes?id=3
+
+{
+
+    "apellido_2": "Jimenes",
+    "email": "juanpj@example.com"
+
+}
+
+{
+    "nombre": "Valeria",
+    "apellido_1": "Morales",
+    "apellido_2": "Hernández",
+    "email": "valeria.morales@example.com",
+    "telefono": "9871-2345"
+}
+
+Marcas
+
+http://localhost/EstiloTech/public/index.php/marcas
+http://localhost/EstiloTech/public/index.php/marcas?id=3
+
+{
+    "nombre": "Old Navy"
+}
+
+{
+    "nombre": "Lacoste",
+    "descripcion": "Marca francesa conocida por su ropa, calzado y accesorios de lujo."
+}
+
+Prendas
+
+http://localhost/EstiloTech/public/index.php/prendas
+http://localhost/EstiloTech/public/index.php/prendas?id=2
+
+{
+    "talla": "XL",
+    "precio": "49.99"
+}
+
+{
+  "nombre": "Chaleco",
+  "talla": "M",
+  "color": "Azul",
+  "precio": "59.99",
+  "marca_id": 3,
+  "stock": 50
+}
+
+Ventas
+
+http://localhost/EstiloTech/public/index.php/ventas
+http://localhost/EstiloTech/public/index.php/ventas?id=8
+
+{
+    "fecha_venta": "2024-10-05 11:30:00",
+    "cliente_id": 4,
+    "prenda_id": 8,
+    "cantidad": 2,
+    "subtotal": "89.98"
+}
+
+{
+    "cliente_id": 4
+}
+
+Reportes
+
+MarcasAlMenosUnaVentas
+http://localhost/EstiloTech/public/index.php/reportes?id=1
+
+PrendasVendidasYCantidadStock
+http://localhost/EstiloTech/public/index.php/reportes?id=2
+
+CincoMarcasMasVendidas
+http://localhost/EstiloTech/public/index.php/reportes?id=3
